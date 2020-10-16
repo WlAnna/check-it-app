@@ -5,6 +5,7 @@ const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
 const radioUnit = document.querySelector('#r')
+const weatherIcon = document.querySelector('#weather-icon')
 
 
 
@@ -28,9 +29,11 @@ weatherForm.addEventListener('submit', (e) => {
                 messageOne.textContent = data.location
                 messageTwo.textContent = data.forecast
                 radioUnit.textContent = data.unit
+                weatherIcon.src = data.image
                 console.log(data.location)
                 console.log(data.forecast)
                 console.log(data.unit)
+                console.log(weatherIcon.src)
             }
         })
     })
