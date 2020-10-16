@@ -14,7 +14,7 @@
 
         <form>
             <input placeholder="Location">
-            <input type="radio" value="m" id="m" name="radio">Celcius
+            <input type="radio" value="m" id="m" name="radio" checked >Celcius
             <input type="radio" value="f" id="f" name="radio">Ferenheit
             <button>Search</button>
         </form>
@@ -23,6 +23,8 @@
 
         <p id="r"></p>
         <img id="weather-icon"/>
+        <p id="location"></p>
+        <p id="time"></p>
     </div>
     
     {{>footer}}
