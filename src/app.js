@@ -35,9 +35,16 @@ app.get('/about', (req, res) => {
     })
 })
 
+app.get('/top-artist', (req, res) => {
+    res.render('top-artist', {
+        title: 'Top Artist',
+        name: 'Anna Wl'
+    })
+})
+
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpText: 'This is some helpful message',
+        helpText: 'For mode information use email address: ania_4508@tlen.pl',
         title: 'Help',
         name: 'Anna Wl'
     })
@@ -61,6 +68,8 @@ app.get('/weather', (req, res) => {
              res.send({
                  forecast: forecastData,
                  location,
+                 latitude,
+                 longitude,
                  address: req.query.address, 
                  unit: req.query.unit,
                  image: forecastDataIcon      

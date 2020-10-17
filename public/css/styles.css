@@ -4,9 +4,6 @@ body {
     max-width: 650px;
     margin: 0 auto;
     padding: 0 16px;
-
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
 }
 
@@ -26,24 +23,45 @@ header {
     margin-bottom: 48px;
 }
 
-h1 {
-    font-size: 64px;
-    margin-bottom: 16px;
-}
-
 header a {
     color: #888888;
     margin-right: 16px;
     text-decoration: none;
 }
 
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+/*about page*/
 .portrait {
     width: 250px;
 }
 
+/*nav location - first section*/
+.nav-location {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#location {
+    padding-right: 5px;
+}
+
+#location:after {
+    content: ',';
+}
+
+/*search - second section*/
 input {
     border: 1px solid #cccccc;
     padding: 8px;
+    margin-right: 10px;
 }
 
 button {
@@ -51,5 +69,79 @@ button {
     border: 1px solid #888888;
     background: #888888;
     color: white;
-    padding: 8px;
+    padding: 8px 30px;
 }
+
+form {
+    display: flex;
+}
+
+.radio-buttons {
+    margin: 15px 0 10px 0;
+}
+
+.search {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.search-title {
+    padding-bottom: 10px;
+}
+
+.lower-letters {
+    text-transform: lowercase;
+}
+
+/*summary - third section*/
+.weather-location {
+    display: flex;
+}
+
+.weather-desc-wrapper-two {
+    display: flex; 
+    border: 1px solid #ddd; 
+    margin: 20px 0px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.weather-icon {
+    margin: 20px 0px 0px 20px;
+}
+
+/*summary table - fourth section*/
+.all-next-days-wrapper {
+    border: 1px solid #ddd; 
+    margin: 20px 0px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.all-next-days-title {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.all-next-days-title p {
+    margin-right: 57px;
+    font-size: 13px;
+    width: 65px;
+}
+
+table, td, th {
+    border-bottom: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+td {
+    padding: 10px 0;
+    text-align: left;
+}
+

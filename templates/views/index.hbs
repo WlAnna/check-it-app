@@ -10,21 +10,37 @@
 <body>
     <div class="main-content">
         {{>header}}
-        <p>Use this sit to get your weather!</p>
+    
+        <div class="nav-location">
+            <p id="location"></p>
+            <p id="time"></p>
+        </div>
 
-        <form>
-            <input placeholder="Location">
-            <input type="radio" value="m" id="m" name="radio" checked >Celcius
-            <input type="radio" value="f" id="f" name="radio">Ferenheit
-            <button>Search</button>
-        </form>
-        <p id="message-1"></p>
-        <p id="message-2"></p>
+        <div class="search">
+            <h2 class="search-title">Use this site to check the weather!</h2>
+            <form>
+                <div>
+                    <input placeholder="Location">
+                        <div class="radio-buttons">
+                            <input type="radio" value="m" id="m" name="radio" checked >Celcius
+                            <input type="radio" value="f" id="f" name="radio">Ferenheit
+                        </div>
+                </div>
+                <div>
+                    <button>Search</button>
+                </div>   
+            </form>
+        </div>
 
-        <p id="r"></p>
-        <img id="weather-icon"/>
-        <p id="location"></p>
-        <p id="time"></p>
+        <div id="weather-desc-wrapper">
+            <div>
+                <div id="message-1">
+                </div>              
+            </div>
+        </div>
+   
+        <div id="all-next-days-header"></div>  
+
     </div>
     
     {{>footer}}

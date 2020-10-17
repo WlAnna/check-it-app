@@ -9,10 +9,10 @@ const forecast = (unit, latitude, longitude, callback) => {
         callback('unable to find location for' + latitude + longitude + unit + undefined, undefined)
       } else {
         callback(undefined, 
-         `It is currently ${body.current.weather_descriptions[0]}
-          Temperature is: ${body.current.temperature} deegree(s) ${(unit === 'f') ? 'F' : 'C'}
-          Feel like temperature is ${body.current.feelslike} ${(unit === 'f') ? 'F' : 'C'}
-          The humidity is  ${body.current.humidity}`, `${body.current.weather_icons}`)
+         `<p>It is currently <span class="lower-letters"> ${body.current.weather_descriptions[0]}</span>.
+          The temperature is ${body.current.temperature} deegree(s) ${(unit === 'f') ? 'F' : 'C'}.
+          Feel like temperature is ${body.current.feelslike} ${(unit === 'f') ? 'F' : 'C'}.
+          The humidity is  ${body.current.humidity}.</p>`, `${body.current.weather_icons}`)
       } 
     })
 }
