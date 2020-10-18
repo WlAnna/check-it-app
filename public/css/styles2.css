@@ -1,0 +1,46 @@
+body {
+    counter-reset: list-counter;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.artist-image {
+    justify-content: flex-end;
+}
+
+.artist-name {
+    padding-top: 10px;
+}
+
+section {
+    border: 1px solid #ddd;
+    padding: 10px 10px 5px 10px;
+    margin: 25px 0px 0px 0px;
+}
+
+a:link {
+    text-decoration: none;
+    color: #333333;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #333333;
+}
+
+a:visited{
+    text-decoration: none;
+    color: #333333;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+section h2::before {
+    counter-increment: list-counter;
+    content: counter(list-counter) ". ";
+}

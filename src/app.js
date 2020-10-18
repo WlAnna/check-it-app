@@ -3,6 +3,7 @@ const express = require('express')
 const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
+const topArtists2 = require('./utils/topArtists2')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -35,12 +36,6 @@ app.get('/about', (req, res) => {
     })
 })
 
-app.get('/top-artist', (req, res) => {
-    res.render('top-artist', {
-        title: 'Top Artist',
-        name: 'Anna Wl'
-    })
-})
 
 app.get('/help', (req, res) => {
     res.render('help', {
@@ -49,6 +44,39 @@ app.get('/help', (req, res) => {
         name: 'Anna Wl'
     })
 })
+
+app.get('/topArtist', (req, res) => { 
+    res.render('topArtist', {
+        title: 'Top Artist',
+        name: 'Anna Wl'
+    })
+})
+
+
+app.get('/topArtist2', (req, res) => { 
+    if(!req.query.address) {
+        return res.send({
+            error: 'You must provide address'
+        })
+    }     
+
+    console.log(req.query)
+
+    topArtists2(req.query.address, (error,data) => {
+        if(error) {
+            return res.send({ error })
+        } else {
+            res.send({
+               
+               topArt: data.topArtista
+            })
+        }
+    })
+
+})
+
+
+
 
 app.get('/weather', (req, res) => {
     if(!req.query.address) {

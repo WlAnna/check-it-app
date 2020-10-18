@@ -7,7 +7,6 @@ const time = document.querySelector('#time')
 const cityName = document.querySelector('#location')
 const allNextDaysHeader = document.querySelector('#all-next-days-header')
 
-
 //get city name based on coordinates from API
 fetch("http://ip-api.com/json/?fields=status,city").then((response) => {
     response.json().then((data) => {
@@ -71,7 +70,8 @@ weatherForm.addEventListener('submit', (e) => {
                 fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${data.latitude}&lon=${data.longitude}&exclude=current,minutely,hourly&appid=15f27c62eb4bf00f92f51cb7cd507a08&units=${(unit === 'f' ? 'standard' : 'metric')}`)
                 .then((response) => {response.json()
                 .then((data) => {
-
+                    
+                    console.log(data.daily)
                     let daily = Object.entries(data.daily)
 
                     console.log(daily)
@@ -122,6 +122,8 @@ weatherForm.addEventListener('submit', (e) => {
 
     console.log(location)
 })
+
+
 
 
 
