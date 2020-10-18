@@ -4,14 +4,6 @@ const topArtistForm = document.querySelector('form')
 const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
 
-fetch('http://puzzle.mead.io/puzzle').then((response) => {
-    response.json().then((data) => {
-        console.log(data)
-    })
-})
-
-
-
 
 //get data from APIs
 topArtistForm.addEventListener('submit', (e) => {
@@ -36,9 +28,7 @@ topArtistForm.addEventListener('submit', (e) => {
                 ${artists.map(artist =>
                         `
                         <section>
-                          
                                 <h2 class="artist-name"><a target="_blank" href="${artist[1].url}">${artist[1].name}</a></h2>
-                          
                             <a target="_blank" class="artist-image" href="${artist[1].url}"><img src="${artist[1].image[1]['#text']}"></a>
                         </section>
                         `
@@ -47,14 +37,6 @@ topArtistForm.addEventListener('submit', (e) => {
             console.log(topArtistMap)
 
             messageOne.innerHTML = topArtistMap
-
-
-
-
-
-
-
-
 
 
             }

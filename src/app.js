@@ -52,6 +52,14 @@ app.get('/topArtist', (req, res) => {
     })
 })
 
+app.get('/topArtist-filter', (req, res) => { 
+    res.render('topArtist-filter', {
+        title: 'Top Artist',
+        name: 'Anna Wl'
+    })
+})
+
+
 
 app.get('/topArtist2', (req, res) => { 
     if(!req.query.address) {
