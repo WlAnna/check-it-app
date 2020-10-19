@@ -5,15 +5,16 @@ const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
 
 
-//get data from APIs
+//Fetch data from APIs
 topArtistForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    //get value from input
+    //Get value from input
     const location = search.value
     messageOne.textContent = 'Loading...'
 
-    fetch('http://localhost:3000/topArtist2?address=' + location).then((response) => {
+    //Fetch data from back end
+    fetch('/topArtist2?address=' + location).then((response) => {
         response.json().then((data) => {
             if(data.error) {
                 console.log(data.error)
@@ -33,7 +34,7 @@ topArtistForm.addEventListener('submit', (e) => {
                         </section>
                         `
                  ).join('')}
-            `;
+            `
             console.log(topArtistMap)
 
             messageOne.innerHTML = topArtistMap

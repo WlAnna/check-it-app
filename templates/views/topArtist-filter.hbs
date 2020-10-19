@@ -15,24 +15,8 @@
     <div class="main-content">
         {{>header}}
         <header><h2 class="search-title">Search the top 10 artists by music type!</h2></header>
-        <nav>
-            <select id="tags">
-                <option value="type">Choose music type</option>
-                <option value="disco">Disco</option>
-                <option value="rock">Rock</option>
-                <option value="clasical">Classical</option>
-                <option value="dance">Dance</option>
-                <option value="jazz">Jazz</option>
-                <option value="punk">Punk</option>
-                <option value="metal">Metal</option>
-                <option value="blues">Blues</option>
-                <option value="country">Country</option>
-                <option value="heavy metal">Heavy metal</option>
-                <option value="pop">Pop</option>
-                <option value="house">House</option>
-                <option value="chili">Chili</option>
-                <option value="piano">Piano</option>
-            </select>
+        <nav id="nav-tags">
+            <select id="tags"></select>
         </nav>
 
         <div id="artists-by-type"></div>
