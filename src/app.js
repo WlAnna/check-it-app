@@ -36,10 +36,9 @@ app.get('/about', (req, res) => {
     })
 })
 
-
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpText: 'For mode information use email address: ania_4508@tlen.pl',
+        helpText: 'For mode information contact AnnaWl',
         title: 'Help',
         name: 'Anna Wl'
     })
@@ -58,8 +57,6 @@ app.get('/topArtist-filter', (req, res) => {
         name: 'Anna Wl'
     })
 })
-
-
 
 app.get('/topArtist2', (req, res) => { 
     if(!req.query.address) {
@@ -82,9 +79,6 @@ app.get('/topArtist2', (req, res) => {
     })
 
 })
-
-
-
 
 app.get('/weather', (req, res) => {
     if(!req.query.address) {
@@ -118,7 +112,7 @@ app.get('/weather', (req, res) => {
 app.get('/products', (req, res) => {
     if (!req.query.search) {
         return res.send({
-            error: 'You must porvide a search term'
+            error: 'You must provide a search term'
         })
     }
     console.log(req.query.search)
