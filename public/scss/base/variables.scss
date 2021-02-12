@@ -1,0 +1,27 @@
+$color-main: #333333;
+$color-main-light: #888888;
+$gray-light: #efeeee; 
+$gray-light-1: 	rgba(239,238,238, 0.5);
+$gray-medium: #dddddd;
+$accent-color: #1b9ee0;
+$accent-color-dark: #188EC9;
+$accent-color-light: #8DCEEF;
+$accent-complementary: #1BE0C0;
+$accent-contrast: #C01BE0;
+
+$transition: all .2s;
+
+$mobile: 65rem;
+$desktop: 45rem;
+
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}

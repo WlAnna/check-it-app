@@ -1,11 +1,13 @@
 {
-  "name": "top-weather-app",
+  "name": "check-it-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node src/app.js",
-    "dev": "nodemon src/app.js -e js,hbs"
+    "dev": "nodemon src/app.js -e js,hbs",
+    "build-css": "node-sass --include-path scss public/scss/main.scss public/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "keywords": [],
   "author": "",
@@ -17,6 +19,8 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "node-sass": "^5.0.0",
+    "nodemon": "^1.19.4",
+    "sass": "^1.32.7"
   }
 }

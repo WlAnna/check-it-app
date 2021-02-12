@@ -1,0 +1,101 @@
+.nav-main {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-main a {
+    color: white;
+    margin: 0 .9rem;
+    box-shadow: rgb(235, 246, 253) 0px 10px 50px;
+    box-shadow: rgba(99, 135, 153, 0.4) 0px 18px 50px -10px;
+    font-size: 1.8rem;
+    border: none;
+    padding: 2rem 6rem;
+    border-radius: 5rem;
+    transition: $transition;
+}
+
+.nav-main-color {
+    background-color: $accent-color;
+}
+
+.nav-main a:hover {
+    background-color: $accent-color-dark;
+}
+
+/**/
+
+.nav-main-dark {
+    background-color: $accent-color-dark;
+}
+
+.nav-basic {
+    background-color: red;
+}
+/**/
+
+.page-title {
+    text-align: center;
+    padding: 10rem 0 2rem 0;
+}
+
+.nav-artist  {
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-artist a {
+    padding: 0 2rem 3rem 2rem;
+    padding: 2rem 5rem;
+    transition: $transition;
+    margin: 0rem 1rem;
+    @include mobile {
+        width: 80%;
+        margin: 1rem 0;
+        }
+}
+
+.nav-artist a:hover {
+    background-color: $gray-light-1;
+    border-radius: 5rem;
+}
+
+.nav-top {
+    border: 1px solid $gray-light;
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    padding: 1rem 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.4rem;
+}
+
+.nav-top a, p {
+    padding-right: 3rem;
+    font-weight: 300;
+}
+
+/*Active nav*/
+
+.hide {
+    display: none;
+}
+
+.active {
+    background-color: $gray-light-1;
+    border-radius: 5rem;
+}
+
+.active-filter {
+    color: green;
+}
+
+.basic {
+    color: $color-main;
+}
+

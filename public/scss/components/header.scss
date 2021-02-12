@@ -1,0 +1,21 @@
+header {
+    padding-bottom: 5rem;
+    color: $color-main;
+}
+
+.skew {
+    transform: skew(0deg, -9deg);
+    background: $gray-light;   
+    background: radial-gradient(ellipse at top, #fff, transparent),
+                radial-gradient(ellipse at bottom, rgb(235, 246, 253), transparent);
+    position: relative;
+    z-index: -10;
+}
+
+.logo {
+    padding-top: 17rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    transform: skew(0deg, 9deg);
+}
+

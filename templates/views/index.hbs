@@ -4,41 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
-    <link rel="icon" href="/img/robot.png">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/img/favicon1.png">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/styles2.css">
+    <link rel="stylesheet" href="css/styles3.css">
 </head>
 <body>
-    <div class="main-content">
-        {{>header}}
-    
-        <section class="nav-location">
-            <p id="location"></p>
-            <p id="time"></p>
-        </section>
-
-        <section class="search">
-            <h2 class="search-title">Use this site to check the weather!</h2>
-            <form>
+     {{>header}}
+    <div class="main-content container">
+       
+            <!--Search section -->
+        <section class="wrapper">
+            <h3 class="search-title">Use this site to check the weather!</h3>
+            <form class="form">
                 <div>
                     <input placeholder="Location">
                         <div class="radio-buttons">
-                            <input type="radio" value="m" id="m" name="radio" checked >Celsius
+                            <input class="celsius"type="radio" value="m" id="m" name="radio" checked >Celsius
                             <input type="radio" value="f" id="f" name="radio">Fahrenheit
                         </div>
                 </div>
                 <div>
-                    <button>Search</button>
+                    <button class="btn">Search</button>
                 </div>   
             </form>
-        </section>
 
-        <section id="weather-desc-wrapper">
-            <div>
-                <div id="message-1">
-                </div>              
+            <!--Error message -->
+            <div id="weather-desc-wrapper">
+                <div>
+                    <div id="message-1">
+                    </div>              
+                </div>
             </div>
         </section>
-   
+
+
+
+        <!--Weather summary -->
         <section id="all-next-days-header"></section>  
 
     </div>

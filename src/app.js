@@ -25,36 +25,59 @@ app.use(express.static(publicDirectoryPath))
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather',
-        name: 'Anna Wl'
+        name: 'Anna Wl',
+        hide: "hide",
+  
+        dark: "nav-main-color",
+        basic: "nav-main-dark"
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About Me',
-        name: 'Anna Wl'
+        title: 'About',
+        name: 'Anna Wl',
+        hide: "hide",
+        dark: "nav-main-color",
+        basic: "nav-main-color"
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpText: 'For mode information contact AnnaWl',
+        helpText: 'For mode information contact AnnaWl.',
         title: 'Help',
-        name: 'Anna Wl'
+        hide: "hide",
+        name: 'Anna Wl',
+        dark: "nav-main-color",
+        basic: "nav-main-color"
     })
 })
 
 app.get('/topArtist', (req, res) => { 
     res.render('topArtist', {
         title: 'Top Artist',
-        name: 'Anna Wl'
+        name: 'Anna Wl',
+        cat1: 'Filter by Country',
+        cat2: 'Filter by Music Type',
+        active: "active",
+        active2: "basic",
+        dark: "nav-main-dark",
+        basic: "nav-main-color"
     })
 })
 
 app.get('/topArtist-filter', (req, res) => { 
     res.render('topArtist-filter', {
         title: 'Top Artist',
-        name: 'Anna Wl'
+        name: 'Anna Wl',
+        cat1: 'Filter by Country',
+        cat2: 'Filter by Music Type',
+        active: "basic",
+        active2: "active",
+        dark: "nav-main-dark",
+        basic: "nav-main-color"
+      
     })
 })
 

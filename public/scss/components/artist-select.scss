@@ -1,0 +1,17 @@
+select {
+    border: 1px solid $gray-medium;
+    border-radius: 5rem;
+    padding: 2rem 50% 2rem 2rem;
+    font-size: 1.6rem;
+    background: url("/img/angle-down-solid.svg") no-repeat right; 
+    background-size: 2rem 2rem;
+    -webkit-appearance: none;
+    background-position-x: 97%;
+    outline: 0;
+}
+
+#nav-tags {
+    display: flex;
+    justify-content: center;
+}
+

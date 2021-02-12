@@ -11,7 +11,7 @@ const allNextDaysHeader = document.querySelector('#all-next-days-header')
 fetch("http://ip-api.com/json/?fields=status,city").then((response) => {
     response.json().then((data) => {
         if(data.status  === "success") {
-            cityName.textContent = data.city
+            cityName.textContent = `${data.city},`
         } 
     })
 })
@@ -79,7 +79,7 @@ weatherForm.addEventListener('submit', (e) => {
                     let nextDayMap = `
                     ${daily.map(day =>
                             `
-                                <table>
+                                
                                     <tr class="table-row">
                                         <td>${new Date(day[1].dt*1000).toLocaleDateString()}</td>
                                         <td>${day[1].weather[0].main}</td>
@@ -88,25 +88,28 @@ weatherForm.addEventListener('submit', (e) => {
                                         <td>${day[1].humidity}</td>    
                                          
                                     </tr>
-                                </table>
+                               
                             `
                      ).join('')}
                 `;
                 console.log(nextDayMap)
                     
-                allNextDaysHeader.innerHTML = `<div class="all-next-days-wrapper">
-                                                <div class="all-next-days-header">
-                                                    <h2>Summary weather data and forecast for next 7 days</h2>
-                                                </div>
-                                                <div class="all-next-days-title">
-                                                        <p>Description</p>
-                                                        <p>Temperature</p>
-                                                        <p>Feels Like Temperature</p>
-                                                        <p>Humidity</p>
-                                                </div>
+                allNextDaysHeader.innerHTML = `<div class="wrapper-weather-summary">
                                                 <div>
-                                                    ${nextDayMap}
+                                                    <h3>Summary weather data and forecast for next 7 days</h3>
                                                 </div>
+                                                    <table>
+                                                        <tr>
+                                                            <th>Day</th>
+                                                            <th>Desc</th>
+                                                            <th>Temp</th>
+                                                            <th>Feels Like Temp</th>
+                                                            <th>Humidity</th>
+                                                        </tr>
+                                                        ${nextDayMap}
+                                                    </table>
+                                             
+                                              
                                               </div>`
               
               

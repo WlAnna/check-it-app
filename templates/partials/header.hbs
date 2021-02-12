@@ -1,11 +1,40 @@
-<header>
-    <h1>{{title}}</h1>
 
-    
-    <a href="/">Weather</a>
-    <a href="/topArtist">Top Artist - by country</a>
-    <a href="/topArtist-filter">Top Artist - by music type</a>
-    <a href="/about">About</a>
-    <a href="/help">Help</a>
+<header>
+    <nav class="nav-top container-L">
+        <div >
+            <a href="/about">About</a>
+            <a href="/help">Help</a>
+        </div>
+        <!--Location -->
+        <div class="nav-location">
+            <p id="location"></p>
+            <p id="time"></p>
+        </div>
+    </nav>
+
+    <div class="skew">
+        <h1 class="logo">Check-it.</h1>
+    </div>
+
+    <nav class="container-L">
+          <div class={{hide1}} >
+            <div class="nav-main">
+                <a  class={{dark}} class="nav-main-color" href="/">Weather</a>
+                <a class={{basic}} class="nav-main-color" href="/topArtist">Top Artist</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <h2 id="page-title" class="page-title">{{title}}</h2>
+    <nav class="container-L">
+        <div class={{hide}} >
+            <div class="nav-artist">
+                <a  class={{active}}  href="topArtist#page-title">{{cat1}}</a>
+                <a  class={{active2}}  href="topArtist-filter#page-title">{{cat2}}</a>
+            </div>
+        </div>
+
+    </nav>
 
 </header>

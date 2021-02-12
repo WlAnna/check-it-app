@@ -1,0 +1,18 @@
+.form {
+    display: flex;
+    justify-content: space-around;
+    @include mobile {
+        flex-wrap: wrap;
+        }
+}
+
+.radio-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem 2rem;
+}
+
+.lower-letters {
+    text-transform: lowercase;
+}

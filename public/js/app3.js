@@ -40,9 +40,9 @@ function fetchArtists(tag) {
             const topListMap = `
             ${top.map(artist =>
                 `
-                <section>
-                        <h2 class="artist-name"><a target="_blank" href="${artist[1].url}">${artist[1].name}</a></h2>
-                    <a target="_blank" class="artist-image" href="${artist[1].url}"><img src="${artist[1].image[1]['#text']}"></a>
+                <section class="section-artist">
+                        <h4 class="artist-name"><a target="_blank" href="${artist[1].url}">${artist[1].name}</a></h4>
+                    <a target="_blank" class="artist-image" href="${artist[1].url}"><img class="artist-image" src="${artist[1].image[1]['#text']}"></a>
                 </section>
                 `
          ).join('')}

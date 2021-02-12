@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Top Artist</title>
-     <link rel="icon" href="/img/robot.png">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/styles2.css">
-    <link rel="stylesheet" href="/css/styles3.css">
+    <link rel="icon" href="/img/favicon2.png">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/main.css">
+  
     
 </head>
 <body>
-    <div class="main-content">
-        {{>header}}
-        <header><h2 class="search-title">Search the top 10 artists by music type!</h2></header>
-        <nav id="nav-tags">
-            <select id="tags"></select>
-        </nav>
+      {{>header}}
 
-        <div id="artists-by-type"></div>
+    <div class="main-content container">
+      
+        <section class="wrapper">
+            <h3 class="search-title">Search the top 10 artists by music type!</h3>
+            <div id="nav-tags" class="spacer">
+                <select id="tags"></select>
+            </div>
+        </section>
+
+        <!--Artist summary -->
+        <div id="artists-by-type" class="spacer"></div>
        
     </div>
 

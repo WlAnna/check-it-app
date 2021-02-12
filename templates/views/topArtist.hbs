@@ -4,26 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-     <link rel="icon" href="/img/robot.png">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/styles2.css">
+    <link rel="icon" href="/img/favicon2.png">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
-    <div class="main-content">
-        {{>header}}
+     {{>header}}
+    <div class="main-content container">
+       
 
+        <section class="wrapper">
+            <h3 class="search-title">Find the top 10 artists in your country!</h3>
+            <form class="form spacer">
         
-        <header><h2 class="search-title">Find the top 10 artists in your country!</h2></header>
-        <form>
-                <div>
-                    <input placeholder="Location">
-                </div>
-                <div>
-                    <button>Search</button>
-                </div>   
-        </form>
+                    <div class="artist-location">
+                        <input  placeholder="Location">
+                    </div>
+                    <div>
+                        <button class="btn btn-contrast">Search</button>
+                    </div>  
+        
+           
+            </form>
+        </section>
 
+
+        <!--Artist summary -->
         <div id="message-1">
         </div> 
 

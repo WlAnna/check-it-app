@@ -4,16 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-     <link rel="icon" href="/img/robot.png">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/img/favicon3.png">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/main.css">
     
 </head>
 <body>
-    <div class="main-content">
-        {{>header}}
-        <p>This site was created by Anna Wl. It uses data from mapbox.com and weatherstack.com </p>
-        <img class="portrait" src="./img/robot.png"/>
-    </div>
+       {{>header}}
+   <main class="main-content container">
+
+        <h4 class="about-intro">This site uses data from mapbox.com, weatherstack.com and audioscrobbler.com. It has been created to easily access current weather data.  You can enter your location to check the current weather in Celcusi or Fahrenheits. </h4>
+        <article>
+            <h4 class="about-heading">Weather</h4>
+            <p class="about-text">
+                It was created to give you easy access to current weather data. You can enter your location to check the current weather in Celcusi or Fahrenheits. A summary of the information will appear on the screen along with a detailed description of the weather for the next seven days.
+            </p>
+        </article>
+                <article>
+            <h4 class="about-heading">Top Artist</h4>
+            <p class="about-text">
+                This web application allows you to search for the top ten artists in your country. By using this application, you can also find ten popular artists in your favourite music genre. All results use hyperlinks to allow you to easily and quickly connect to last.fm where you can find more information about your favourite bands and tones of music.
+            </p>
+        </article>
+        <p class="main-content-text"></p>
+   </main>
 
     {{>footer}}
 </body>

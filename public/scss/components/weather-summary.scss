@@ -1,0 +1,64 @@
+/*summary - third section*/
+.weather-location {
+    display: flex;
+}
+
+.weather-desc-wrapper-two {
+    display: flex; 
+    background-color: rgba(244,244,244,0.5);
+    border-radius: 5rem;
+    padding: 5rem;
+    margin-top: 2rem;
+    border: none;
+    flex-direction: row;
+    @include mobile {
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column-reverse;
+        }
+}
+
+.weather-desc-wrapper-two div p {
+    @include mobile {
+        padding-top: 1rem;
+        }  
+}
+
+.weather-icon {
+    margin: 20px 0px 0px 20px;
+    @include mobile {
+        margin-left: 0; 
+        }
+}
+
+/*summary table - fourth section*/
+
+table, td, th {
+    border-bottom: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+td, th {
+    padding: 2rem 0rem 2rem 0;
+    text-align: right;
+}
+
+th {
+    font-size: 1.3rem;
+}
+
+.wrapper-weather-summary {
+    border-radius: 5rem;
+    padding: 8rem;
+    align-items: center;
+    margin-bottom: 5rem;
+    box-shadow: $gray-light 0px 10px 50px;   
+    @include mobile {
+        padding: 8rem 3rem;
+        }
+}

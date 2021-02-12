@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Poppins, Arial, sans-serif;
+    font-size: 1.6rem;  
+    margin: 0 auto;
+    color: $color-main;
+    font-family: poppins;
+    min-height: 100vh;
+    counter-reset: list-counter;
+}
+
+.main-content {
+    max-width: 1200px;
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 70rem;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.container-L {
+    max-width: 80rem;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 6.4rem;  
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    border: 1px solid $gray-medium;
+    border-radius: 5rem;
+    padding: 2rem 10rem 2rem 2rem;
+    margin-right: 1rem;
+    font-size: 1.6rem;
+    outline: 0;
+}
+
+.btn {
+    cursor: pointer;
+    border: 2px solid $accent-color;
+    border-radius: 5rem;
+    background: transparent;
+    color: $accent-color;
+    padding: 2rem 8rem;
+    font-size: 1.6rem;
+    outline: 0;
+    transition: $transition;
+    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, $accent-color, $accent-complementary);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
+    @include mobile {
+        padding: 2rem 13.5rem;
+        }
+}
+
+.btn:hover {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, $accent-complementary, $accent-color);
+}
+
+.btn-contrast {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, $accent-color, $accent-contrast);
+    transition: $transition;
+}
+
+.btn-contrast:hover {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, $accent-contrast, $accent-color);
+}
+
+
+.spacer {
+    padding-bottom: 4rem;
+}
+
+.wrapper {
+    border-radius: 5rem;
+    padding: 8rem;
+    align-items: center;
+    margin-bottom: 5rem;
+    box-shadow: $gray-light 0px 10px 50px;   
+}
+
+a:link {
+    color: $color-main;
+    text-decoration: none;
+}
+
+a:visited {
+    color: $color-main;
+}
+
+a:hover {
+    color: $color-main-light;
+}
+
+a:active {
+    color: $color-main;
+}
+
+.main-content-text {
+    text-align: center;
+}
